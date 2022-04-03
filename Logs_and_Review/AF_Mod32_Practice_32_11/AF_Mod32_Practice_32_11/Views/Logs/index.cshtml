@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Logs";
+}
+
+<style>
+     table {
+       border-spacing: 0 15px;
+       align-self: center;
+     }
+     th {
+       background-color: #4287f5;
+       color: white;
+     }
+     th,
+     td {
+       width: 650px;
+       text-align: center;
+       border: 1px solid black;
+       padding: 5px;
+     }
+     h2 {
+       color: #4287f5;
+     }
+   </style>
+ 
+<div class="text-center">
+   <h2 class="display-4" style="text-align: left">Лог запросов к серверу:</h2>
+   <br>
+       <table>
+           <tr>
+               <td>Идентификатор</td>
+               <td>Дата запроса</td>
+               <td>URL</td>
+               
+           </tr>
+           @foreach (var log in Model)
+           {
+               <tr>
+                   <td>@log.Id</td>
+                   <td>@log.Date</td>
+                   <td>@log.Url</td>
+               </tr>
+           }
+       </table>
+</div>
+@*/dsad*@

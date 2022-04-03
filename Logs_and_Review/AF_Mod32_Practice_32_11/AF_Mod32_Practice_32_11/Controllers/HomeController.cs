@@ -16,16 +16,6 @@ namespace AF_Mod32_Practice_32_11.Controllers
 
         public IActionResult Index()
         {
-            //var newUser = new User()
-            //{
-            //    Id = Guid.NewGuid(),
-            //    FirstName = "Alex",
-            //    LastName = "Last",
-            //    JoinDate = DateTime.Now
-            //};
-
-            //await _repo.Add(newUser);
-
             return View();
         }
 

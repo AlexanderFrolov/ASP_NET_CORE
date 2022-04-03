@@ -6,8 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<IUserRepository, UserRepository>();
 
+//register repos
+builder.Services.AddSingleton<IUserRepository, UserRepository>();
+builder.Services.AddSingleton<IRequestRepository, RequestRepository>();
+
+//use connection and add db context 
 string connection = builder.Configuration.GetConnectionString("DefaultString");
 builder.Services.AddDbContext<BlogContext>(options => options.UseSqlServer(connection), ServiceLifetime.Singleton);
 
